@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="137.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimal.vistas.ImportController">
+   <children>
+      <RadioButton fx:id="imJSON" layoutX="245.0" layoutY="37.0" mnemonicParsing="false" text="JSON">
+         <toggleGroup>
+            <ToggleGroup fx:id="importG" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="imCSV" layoutX="156.0" layoutY="37.0" mnemonicParsing="false" text="CSV" toggleGroup="$exportG" />
+      <RadioButton fx:id="imXML" layoutX="61.0" layoutY="37.0" mnemonicParsing="false" text="XML" toggleGroup="$exportG" />
+      <Button fx:id="btnImport" layoutX="265.0" layoutY="91.0" mnemonicParsing="false" onAction="#importFile" text="Importar" />
+   </children>
+</AnchorPane>

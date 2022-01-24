@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="aplicacion" prefHeight="584.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestisimal.vistas.GestisimalController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu fx:id="listado" mnemonicParsing="false" text="Listado">
+					<items>
+						<MenuItem fx:id="listarLista" mnemonicParsing="false" onAction="#listarAlma" text="Formato lista" />
+						<MenuItem fx:id="listarIndividual" mnemonicParsing="false" onAction="#listarAlmaIndi" text="Foramato indivitual" />
+					</items>
+				</Menu>
+            <Menu fx:id="alma" mnemonicParsing="false" text="Almacen">
+               <items>
+                  <MenuItem fx:id="alAlta" mnemonicParsing="false" onAction="#altaBTN" text="Alta" />
+                  <MenuItem fx:id="alBaja" mnemonicParsing="false" onAction="#bajaBTN" text="Baja" />
+                  <MenuItem fx:id="alModificar" mnemonicParsing="false" onAction="#modBTN" text="Modificación" />
+                  <MenuItem fx:id="alEnMercancia" mnemonicParsing="false" onAction="#enMercaBTN" text="Entrada de Mercancía" />
+                  <MenuItem fx:id="alSalMercancia" mnemonicParsing="false" onAction="#salMercaBTN" text="Salida de Mercancía" />
+               </items>
+            </Menu>
+				<Menu fx:id="utilidades" mnemonicParsing="false" text="Utilidades">
+					<items>
+						<MenuItem fx:id="utiExport" mnemonicParsing="false" onAction="#exportBTN" text="Exportar a fichero" />
+						<MenuItem fx:id="utiImport" mnemonicParsing="false" onAction="#importBTN" text="Importar de fichero" />
+						<MenuItem fx:id="utiSalir" mnemonicParsing="false" text="Salir" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<bottom>
+		<Label fx:id="descripL" prefHeight="17.0" prefWidth="998.0" BorderPane.alignment="CENTER" />
+	</bottom>
+	<center>
+		<ImageView fx:id="imgAlma" fitHeight="571.0" fitWidth="1322.0" pickOnBounds="true" preserveRatio="true" smooth="false" BorderPane.alignment="CENTER">
+			<image>
+				<Image url="@../../../img/almacen.jpg" />
+			</image>
+		</ImageView>
+	</center>
+</BorderPane>
